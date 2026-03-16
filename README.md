@@ -1,5 +1,6 @@
 ### Interaccion con Dispositivos Moviles 
 
-## Profesor: Matias
-## Alumno: 
 
+## Profesor: Matias Duro
+
+## Alumno: 
