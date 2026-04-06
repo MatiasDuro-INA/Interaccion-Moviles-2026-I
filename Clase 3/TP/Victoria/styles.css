@@ -1,0 +1,103 @@
+/* variables globales - Estilo Verde Savia */
+:root {
+    --color-primario: #8a9a5b; /* Verde savia principal */
+    --color-secundario: #a3b18a; /* Verde más suave */
+    --color-fondo: #f8f9f5; /* Blanco con un toque verdoso */
+    --color-acento: #4a5d23; /* Verde bosque profundo */
+    --color-acento-hover: #3a4b1c;
+    --color-texto: #2d3436;
+    --color-blanco: #ffffff;
+
+    /* Tokenizar */
+
+    --fuente-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --sombra-tarjeta: 0 0.25rem 1rem rgba(0,0,0,0.05);
+    --transicion: 0.6s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-base);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    background-color: var(--color-blanco);
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--sombra-tarjeta);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--color-primario);
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: var(--color-texto);
+    font-size: 14px;
+    font-weight: 500;
+    transition: color var(--transicion);
+}
+
+nav ul li a:hover {
+    color: var(--color-primario);
+}
+
+
+.hero {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+

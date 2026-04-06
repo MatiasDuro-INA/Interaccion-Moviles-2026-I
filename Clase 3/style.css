@@ -1,0 +1,57 @@
+/* variables globales */
+:root{
+    --color-primario:  #d473d9;
+    --color-secundario: #b155b6;
+    --color-fondo: #f5f5f5;
+    --color-acento: #ca3c34;
+    --color-acento-hover: #c73652;
+    --color-texto: #333333;
+    --color-blanco: #ffffff;
+
+    --fuente-base: 'Arial', Helvetica, sans-serif;
+    --sombra-tarjeta: 0 0.25rem 1rem rgba(0,0,0,0.1);
+    --transicion: 0.3 ease;
+
+    --text-sm: 48px;
+    --text-md: 65px;
+    /* clamp(valor minimo, valor ideal, valor maximo */
+    --text-l: clamp(1.5rem, 4vw + 1rem, 3.8rem);
+        /* --text-l: calc(4vw + 1rem); */
+
+    --container-l: 350px;
+    /* vw: view-width. el ancho de la vista */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-base);
+    font-size: 1rem;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1{
+    font-size: var(--text-l);
+}
+
+
+div{
+    /* width: 50%;;
+    min-width: 40%;
+    max-width: 80%; */
+    width: clamp(40%, --container-l, 80%);
+}
