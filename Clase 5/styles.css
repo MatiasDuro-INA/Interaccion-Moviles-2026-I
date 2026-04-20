@@ -1,0 +1,77 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  font-family: "Open Sans", sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+
+}
+
+.ejemplo-container{
+    background-color: rgba(46, 46, 46, 0.251);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px dashed rgba(103, 97, 97, 0.421);
+}
+
+.item-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.elemento{
+    padding: 1.2rem 1.5rem;
+    border-radius: 8px;
+    background-color: rgb(93, 27, 154);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+
+.elemento:nth-child(1){
+    background-color: black;
+}
+
+.elemento:first-child {
+    background-color: rgb(34, 0, 255);
+}
+
+
+.elemento:last-child{
+    background-color: red;
+}
+
+.elemento:last-child span{
+    color: blue
+}
+
+
+/* Even = pares // apunta a las posiciones de numero par (2, 4, 6, 8, 10...) */
+.elemento:nth-child(even){
+    background-color: rgb(182, 25, 159);
+}
+
+/* odd = impares // apunta a las posiciones de numero impar (1, 3, 5, 7, 9, etc...) */
+.elemento:nth-child(odd){
+    background-color: rgb(154, 118, 45);
+}
+
+
+.elemento:nth-child(5){
+    background-color: rgb(39, 240, 16);
+    border: 1px solid blue;
+    padding: 25px;
+}
