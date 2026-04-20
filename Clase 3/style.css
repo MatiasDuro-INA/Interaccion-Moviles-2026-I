@@ -13,7 +13,7 @@
     --transicion: 0.3 ease;
 
     --text-sm: 48px;
-    --text-md: 65px;
+    --text-md: clamp(0.8rem, 1vw + 1rem, 1.3rem);
     /* clamp(valor minimo, valor ideal, valor maximo */
     --text-l: clamp(1.5rem, 4vw + 1rem, 3.8rem);
         /* --text-l: calc(4vw + 1rem); */

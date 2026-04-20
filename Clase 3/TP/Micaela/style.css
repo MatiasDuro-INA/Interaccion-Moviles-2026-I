@@ -115,7 +115,7 @@
         }
 
         .header h1 {
-            font-size: 2.5rem;
+            font-size: var(--text-xl);
             margin-bottom: 1rem;
             color: #2c3e50;
             background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
@@ -125,7 +125,7 @@
         }
 
         .header p {
-            font-size: 1.2rem;
+            font-size: var(--text-md);
             color: #304f52;
             max-width: 800px;
             margin: 0 auto;
@@ -159,7 +159,7 @@
         }
 
         .titulo {
-            font-size: 1.5em;
+            font-size: var(--text-xl);
             color: #6a11cb;
             margin-bottom: 15px;
             text-align: center;
