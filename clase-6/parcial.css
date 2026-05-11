@@ -1,0 +1,210 @@
+/*
+=====================================================
+PARCIAL - DETALLE DE PRODUCTO
+=====================================================
+Este CSS tiene la base armada pero LE FALTAN cosas.
+Mira las consignas en el HTML (parcial.html) y completalas
+en este mismo archivo.
+=====================================================
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #f4f4f4;
+    color: #222222;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 2rem 0;
+}
+
+/* ===== NAVBAR ===== */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 0;
+    /* alinear logo, links y hamburguesa */
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #5d1b9a;
+}
+
+.nav-links {
+    list-style: none;
+    gap: 1.5rem;
+    /* mostrar los links en fila */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222222;
+    font-weight: 600;
+    /* agregar estilo hover */
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 32px;
+    height: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* este botón debe estar oculto en desktop y visible en mobile */
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #222222;
+    border-radius: 2px;
+}
+
+/* ===== DETALLE DE PRODUCTO ===== */
+.product-detail {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    gap: 2rem;
+    /* que la imagen y la info se vean en fila */
+}
+
+.product-image {
+    flex: 1;
+}
+
+.product-image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-category {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: #888888;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.product-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: #222222;
+}
+
+.product-price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #5d1b9a;
+    margin-bottom: 1rem;
+}
+
+.product-description {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    color: #444444;
+}
+
+/* ===== LISTA DE CARACTERÍSTICAS ===== */
+.feature-list {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.feature-list li {
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.4rem;
+    background-color: #ededed;
+    border-radius: 6px;
+    color: #222222;
+}
+
+/* aplicar nth-child first, last, even y odd a .feature-list li */
+
+
+/* ===== ACCIONES ===== */
+.product-actions {
+    gap: 0.8rem;
+    /* alinear input y botones en fila */
+}
+
+.qty-input {
+    width: 70px;
+    padding: 0.6rem;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-align: center;
+    /* agregar estilo focus */
+}
+
+.btn-primary {
+    padding: 0.7rem 1.4rem;
+    background-color: #5d1b9a;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    /* agregar mouse por encima*/
+}
+
+.btn-secondary {
+    padding: 0.7rem 1.4rem;
+    background-color: #ffffff;
+    color: #5d1b9a;
+    border: 2px solid #5d1b9a;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    /* TODO: agregar mouse por encima */
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        padding: 1rem;
+        border-bottom: 1px solid #e0e0e0;
+        gap: 1rem;
+        z-index: 10;
+    }
+}
+
+/* agregar media query para mobile (max-width: 768px) que:
+   - oculte .nav-links
+   - muestre .hamburger
+*/

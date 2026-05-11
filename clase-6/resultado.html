@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="resultado.css">
+    <title>Resultado - Detalle de Producto</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">TiendaDemo</div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="product-detail">
+
+            <div class="product-image">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_720214-CBT74979884251_032024-P.webp"
+                    alt="Auriculares Sony inalámbricos">
+            </div>
+
+            <div class="product-info">
+                <p class="product-category">Audio / Auriculares</p>
+                <h1 class="product-title">Sony WH-1000XM5</h1>
+                <p class="product-price">$ 249.999</p>
+
+                <p class="product-description">
+                    Auriculares inalámbricos con cancelación de ruido líder en su categoría.
+                    Sonido de alta resolución, hasta 30 horas de batería y micrófonos
+                    optimizados para llamadas claras en cualquier entorno.
+                </p>
+
+                <ul class="feature-list">
+                    <li>Cancelación activa de ruido</li>
+                    <li>Bluetooth 5.2 multipunto</li>
+                    <li>30 horas de batería</li>
+                    <li>Carga rápida USB-C</li>
+                    <li>Compatible con Hi-Res Audio</li>
+                </ul>
+
+                <div class="product-actions">
+                    <input class="qty-input" type="number" value="1" min="1">
+                    <button class="btn-primary">Comprar ahora</button>
+                    <button class="btn-secondary">Agregar al carrito</button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+
+</body>
+
+</html>

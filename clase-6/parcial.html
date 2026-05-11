@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="parcial.css">
+    <title>Parcial - Detalle de Producto</title>
+</head>
+
+<body>
+
+    <!--
+    =====================================================
+    CONSIGNA DEL PARCIAL - DETALLE DE PRODUCTO
+    =====================================================
+
+    Este HTML y CSS ya tienen una estructura base armada.
+    Tu tarea es completar los siguientes puntos en el archivo parcial.css:
+
+    1) VARIABLES CSS:
+       - Pasar TODOS los colores que están "hardcodeados" en el CSS a variables.
+       - Definirlas en :root (ej: --color-primario, --color-fondo, etc.)
+       - Reemplazar los valores en el resto del CSS para usar var(--nombre).
+
+    2):
+       Aplicar selectores nth-child a la lista de características (.feature-list li):
+       - cambiar el color de fondo al primero.
+       - agregarle un borde diferente o cambiar el color del texto al ultimo.
+       - aplicar un color de fondo distinto a los pares.
+       - aplicar un color de fondo distinto a los impares.
+
+    3):
+       - El botón ".btn-primary" debe cambiar de color al pasar el mouse por encima.
+       - El botón ".btn-secondary" debe tener un efecto al hacer al pasar el mosue por encima (cambio de fondo, borde, etc.).
+       - El input de cantidad ".qty-input" debe tener un estilo distinto al hacer focus.
+
+    4) FLEXBOX:
+       - El contenedor ".product-detail" debe mostrar la imagen y la info del producto en fila (lado a lado).
+       - El ".product-actions" debe alinear los botones y el input de cantidad en fila con espacio entre ellos.
+       - El navbar (.navbar) debe distribuir en horizontal el logo de los li items
+
+    5) NAVBAR RESPONSIVE (MEDIA QUERY):
+       - Ya existe un botón hamburguesa (.hamburger) PERO está siempre visible y los links también.
+       - Ocultar el botón hamburguesa en pantallas grandes.
+       - En pantallas chicas (max-width: 768px):
+            * Ocultar los .nav-links
+            * Mostrar el botón hamburguesa
+    =====================================================
+    -->
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">TiendaDemo</div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="product-detail">
+
+            <div class="product-image">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_720214-CBT74979884251_032024-P.webp"
+                    alt="Auriculares Sony inalámbricos">
+            </div>
+
+            <div class="product-info">
+                <p class="product-category">Audio / Auriculares</p>
+                <h1 class="product-title">Sony WH-1000XM5</h1>
+                <p class="product-price">$ 249.999</p>
+
+                <p class="product-description">
+                    Auriculares inalámbricos con cancelación de ruido líder en su categoría.
+                    Sonido de alta resolución, hasta 30 horas de batería y micrófonos
+                    optimizados para llamadas claras en cualquier entorno.
+                </p>
+
+                <ul class="feature-list">
+                    <li>Cancelación activa de ruido</li>
+                    <li>Bluetooth 5.2 multipunto</li>
+                    <li>30 horas de batería</li>
+                    <li>Carga rápida USB-C</li>
+                    <li>Compatible con Hi-Res Audio</li>
+                </ul>
+
+                <div class="product-actions">
+                    <input class="qty-input" type="number" value="1" min="1">
+                    <button class="btn-primary">Comprar ahora</button>
+                    <button class="btn-secondary">Agregar al carrito</button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- JS provisto: solo abre/cierra el menú hamburguesa. NO modificar. -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+
+</body>
+
+</html>
