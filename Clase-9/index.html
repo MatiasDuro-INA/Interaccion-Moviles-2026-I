@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <nav aria-label="Navegacion Principal">
+            <ul class="nav-links">
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Semantica</a></li>
+                <li><a href="">ARIA</a></li>
+                <li><a href="">Ejemplos</a></li>
+            </ul>
+        </nav>
+        <img src="" alt="">
+    </header>
+
+    <main>
+
+              <section id="aria" class="card" aria-labelledby="aria-title">
+            <h2 id="aria-title">ARIA: atributos más usados</h2>
+            <h3>1. aria-label</h3>
+            <p>
+                Le da una etiqueta textual a un elemento que <em>no tiene texto
+                visible</em>. Típico caso: botones que solo tienen un ícono.
+            </p>
+    
+            <div class="demo">
+                <button class="btn-icon" aria-label="Cerrar diálogo">✕</button>
+                <code>&lt;button aria-label="Cerrar diálogo"&gt;✕&lt;/button&gt;</code>
+            </div>
+
+
+            <h3>2. aria-labelledby</h3>
+            <p>
+                Igual que aria-label, pero apunta al <strong>id</strong> de otro
+                elemento que ya tiene el texto. Útil para no duplicar texto.
+            </p>
+   
+            <div class="demo">
+                <code>&lt;section aria-labelledby="titulo"&gt;<br>
+                &nbsp;&nbsp;&lt;h2 id="titulo"&gt;Mi sección&lt;/h2&gt;<br>
+                &lt;/section&gt;</code>
+            </div>
+
+
+            <h3>3. aria-describedby</h3>
+            <p>
+                Apunta al id de un elemento que <em>describe</em> a este. Típico para
+                ayudas de formularios o mensajes de error.
+            </p>
+            <div class="demo">
+                <label for="pass">Contraseña</label>
+                <input
+                    type="password"
+                    id="pass"
+                    aria-describedby="pass-help"
+                >
+                <small id="pass-help">Mínimo 8 caracteres, incluí un número.</small>
+            </div>
+
+
+            <h3>4. aria-hidden</h3>
+            <p>
+                <code>aria-hidden="true"</code> oculta el elemento del árbol de
+                accesibilidad (los lectores de pantalla lo ignoran), pero sigue
+                siendo visible para los ojos.
+            </p>
+ 
+            <div class="demo">
+                <button class="btn-primary">
+                    <span aria-hidden="true">🗑️</span>
+                    Eliminar
+                </button>
+            </div>
+
+
+            <h3>5. aria-expanded</h3>
+            <p>
+                Indica si un elemento expansible está abierto o cerrado.
+                Imprescindible para menús, accordions, dropdowns.
+            </p>
+
+            <div class="demo">
+                <button
+                    id="menu-toggle"
+                    class="btn-primary"
+                    aria-expanded="false"
+                    aria-controls="menu-panel"
+                >
+                    Menú
+                </button>
+                <ul id="menu-panel" class="menu-panel" hidden>
+                    <li><a href="#">Opción 1</a></li>
+                    <li><a href="#">Opción 2</a></li>
+                    <li><a href="#">Opción 3</a></li>
+                </ul>
+            </div>
+
+
+    </main>
+
+</body>
+
+</html>
