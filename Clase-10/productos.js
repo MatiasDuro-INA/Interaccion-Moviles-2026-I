@@ -30,6 +30,15 @@ const productosMasVendidos = [
     },
 ]
 
+
+localStorage.setItem("usuario", "Anahi")
+
+const saludo = document.getElementById("saludo")
+
+localStorage.setItem("productosOfertas", JSON.stringify(productosOfertas))
+
+saludo.innerHTML = `Hola ${localStorage.getItem("usuario")}`
+
 const ofertas = document.getElementById("contenedor-ofertas")
 const masVendidos = document.getElementById("contenedor-masVendidos")
 

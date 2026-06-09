@@ -1,0 +1,178 @@
+:root {
+    --fondo:       #f4f5f7;
+    --superficie:  #ffffff;
+    --texto:       #1a1a1a;
+    --texto-suave: #555555;
+    --primario:    #2563eb;
+    --borde:       #e2e2e8;
+    --code-bg:     #eef0f4;
+
+    /* posición de la bolita y opacidad de iconos del switch */
+    --thumb-x:    0;
+    --sol-op:     1;
+    --luna-op:    0.35;
+}
+
+/* Tema oscuro: se activa cuando el <body> tiene la clase "oscuro" */
+body.oscuro {
+    --fondo:       #0f172a;
+    --superficie:  #1e293b;
+    --texto:       #f1f5f9;
+    --texto-suave: #94a3b8;
+    --primario:    #60a5fa;
+    --borde:       #334155;
+    --code-bg:     #334155;
+
+    --thumb-x:    28px;
+    --sol-op:     0.35;
+    --luna-op:    1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    color: var(--texto);
+    background: var(--fondo);
+    /* transición suave al cambiar de tema */
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--superficie);
+    border-bottom: 1px solid var(--borde);
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.navbar__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--primario);
+    text-decoration: none;
+}
+
+.navbar__logo .icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--primario);
+}
+
+.navbar__links {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto; /* empuja links y switch a la derecha */
+}
+
+.navbar__links a {
+    color: var(--texto);
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.navbar__links a:hover {
+    background: var(--borde);
+}
+
+/* ===== SWITCH DE TEMA ===== */
+.switch {
+    position: relative;
+    width: 60px;
+    height: 32px;
+    border: 1px solid var(--borde);
+    border-radius: 999px;
+    background: var(--fondo);
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.switch:focus-visible {
+    outline: 3px solid var(--primario);
+    outline-offset: 2px;
+}
+
+/* iconos sol y luna dentro del switch */
+.switch__icon {
+    width: 18px;
+    height: 18px;
+    margin: 0 6px;
+    z-index: 1;
+    stroke: var(--texto-suave);
+    fill: none;
+}
+
+.switch__icon--sol  { fill: #f59e0b; stroke: #f59e0b; opacity: var(--sol-op); }
+.switch__icon--luna { fill: #cbd5e1; stroke: #cbd5e1; opacity: var(--luna-op); }
+
+/* la bolita que se desliza */
+.switch__thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--primario);
+    transform: translateX(var(--thumb-x));
+    transition: transform 0.3s ease;
+}
+
+/* ===== CONTENIDO ===== */
+.contenido {
+    max-width: 720px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+h1 {
+    color: var(--primario);
+}
+
+.tarjeta {
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.tarjeta h2 {
+    margin-top: 0;
+}
+
+code {
+    background: var(--code-bg);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-family: "Consolas", monospace;
+    font-size: 0.9em;
+}
+
+@media (max-width: 540px) {
+    .navbar__links {
+        display: none; /* en móvil dejamos solo logo + switch */
+    }
+    .navbar__logo {
+        margin-right: auto;
+    }
+}

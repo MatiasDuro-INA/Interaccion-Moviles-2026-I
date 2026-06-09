@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body class="oscuro">
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <a href="#" class="navbar__logo">
+            <!-- icono "rayo" -->
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" />
+            </svg>
+            <span>MiSitio</span>
+        </a>
+
+        <nav class="navbar__links" aria-label="Navegación principal">
+            <a href="#">Inicio</a>
+            <a href="#">Acerca</a>
+            <a href="#">Contacto</a>
+        </nav>
+
+        <!-- ===== SWITCH DE TEMA ===== -->
+        <button
+            id="toggle-tema"
+            class="switch"
+            aria-label="Cambiar entre modo claro y oscuro"
+        >
+            <!-- icono sol -->
+            <svg class="switch__icon switch__icon--sol" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="5" />
+                <g stroke-width="2" stroke-linecap="round">
+                    <line x1="12" y1="1"  x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="1"  y1="12" x2="3"  y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.2"  y1="4.2"  x2="5.6"  y2="5.6" />
+                    <line x1="18.4" y1="18.4" x2="19.8" y2="19.8" />
+                    <line x1="4.2"  y1="19.8" x2="5.6"  y2="18.4" />
+                    <line x1="18.4" y1="5.6"  x2="19.8" y2="4.2" />
+                </g>
+            </svg>
+            <!-- icono luna -->
+            <svg class="switch__icon switch__icon--luna" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+            </svg>
+            <!-- bolita que se desliza -->
+            <span class="switch__thumb"></span>
+        </button>
+    </header>
+
+    <!-- ===== CONTENIDO ===== -->
+    <main class="contenido">
+        <h1>Modo oscuro con <code>localStorage</code></h1>
+        <p>
+            Tocá el switch de arriba a la derecha para cambiar entre modo claro y
+            oscuro. La preferencia queda <strong>guardada en el navegador</strong>:
+            recargá la página o cerrala y volvé a abrirla — el tema se mantiene. ✨
+        </p>
+
+        <div class="tarjeta">
+            <h2>¿Cómo funciona?</h2>
+            <ol>
+                <li>El tema actual se guarda en el atributo <code>data-tema</code> del <code>&lt;html&gt;</code>.</li>
+                <li>El CSS pinta los colores según ese atributo usando variables.</li>
+                <li>Al tocar el switch, JavaScript guarda la elección en <code>localStorage</code>.</li>
+                <li>Al cargar la página, se lee <code>localStorage</code> y se aplica el tema guardado.</li>
+            </ol>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
